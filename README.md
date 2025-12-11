@@ -5,7 +5,7 @@ This project builds a relational PostgreSQL database for a large Reddit dataset 
 ## Overview
 
 The dataset contains four core entities: authors, subreddits, submissions, and comments.  
-This repository defines the database schema, loads the data, and computes summary tables such as:
+This repository defines the database schema and the analytical queries that compute summary tables such as:
 
 - Comment activity per user
 - Subreddit counts by type
@@ -17,22 +17,21 @@ The goal is to demonstrate practical data engineering and SQL skills on a modera
 
 ## Features
 
-- Normalized relational schema for Reddit data (authors, subreddits, submissions, comments)  
+- Normalized relational schema for Reddit data (`authors`, `subreddits`, `submissions`, `comments`)
 - Primary keys, unique constraints, and foreign keys to enforce consistency
-- Separation of table creation, relationship definitions, and analytical queries into dedicated SQL files  
-- Reproducible execution via a single shell script (`assignment1.sh`)  
+- Clear separation of table creation, relationship definitions, and analytical queries into dedicated SQL files
 - Output materialized as result tables (`query1`–`query5`) for easy inspection
 
 ## Tech Stack
 
 - PostgreSQL 14
 - SQL (DDL and DML)
-- Bash (`assignment1.sh`)
+- `psql` command-line client
 - Optional: `pg_bulkload` or similar tools for optimized loading
 
 ## Data Model
 
-The schema is defined in `create_tables.sql`. 
+The schema is defined in `create_tables.sql`.
 
 **Tables:**
 
@@ -48,7 +47,7 @@ The schema is defined in `create_tables.sql`.
 - `comments`  
   Contains comment-level data, including author, subreddit, parent relationships, body text, scores, and other attributes.
 
-**Constraints and relationships** are defined in `create_relations.sql`
+**Constraints and relationships** are defined in `create_relations.sql`:
 
 - `submissions.author` → `authors.name`  
 - `submissions.subreddit_id` → `subreddits.name`  
