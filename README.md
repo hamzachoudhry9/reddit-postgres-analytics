@@ -18,8 +18,8 @@ The goal is to demonstrate practical data engineering and SQL skills on a modera
 ## Features
 
 - Normalized relational schema for Reddit data (authors, subreddits, submissions, comments)  
-- Primary keys, unique constraints, and foreign keys to enforce consistency :contentReference[oaicite:0]{index=0}  
-- Separation of table creation, relationship definitions, and analytical queries into dedicated SQL files :contentReference[oaicite:1]{index=1} :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3}  
+- Primary keys, unique constraints, and foreign keys to enforce consistency
+- Separation of table creation, relationship definitions, and analytical queries into dedicated SQL files  
 - Reproducible execution via a single shell script (`assignment1.sh`)  
 - Output materialized as result tables (`query1`–`query5`) for easy inspection
 
@@ -32,7 +32,7 @@ The goal is to demonstrate practical data engineering and SQL skills on a modera
 
 ## Data Model
 
-The schema is defined in `create_tables.sql`. :contentReference[oaicite:4]{index=4}
+The schema is defined in `create_tables.sql`. 
 
 **Tables:**
 
