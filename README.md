@@ -61,10 +61,7 @@ This design ensures that every comment and submission links back to a valid auth
 ## Repository Structure
 
 ```text
-.
-├── assignment1.sh          # Main runner script (database setup + loading + queries)
 ├── create_tables.sql       # Table definitions (DDL)
 ├── create_relations.sql    # Foreign keys and constraints
 ├── queries.sql             # Analytical queries -> query1..query5
-├── README.md               # Project documentation
-└── data/                   # Place CSV files here (authors, comments, submissions, subreddits)
+└── README.md               # Project documentation
