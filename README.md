@@ -48,7 +48,7 @@ The schema is defined in `create_tables.sql`. :contentReference[oaicite:4]{index
 - `comments`  
   Contains comment-level data, including author, subreddit, parent relationships, body text, scores, and other attributes.
 
-**Constraints and relationships** are defined in `create_relations.sql`: :contentReference[oaicite:5]{index=5}
+**Constraints and relationships** are defined in `create_relations.sql`
 
 - `submissions.author` → `authors.name`  
 - `submissions.subreddit_id` → `subreddits.name`  
